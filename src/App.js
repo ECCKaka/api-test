@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import axios from "axios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	function login() {
+		axios.post(
+			"https://django-cisl-52818-9-1318437721.sh.run.tcloudbase.com/api/admin-login",
+			{
+				username: "ecckaka",
+				password: "chrisfufu",
+			}
+		);
+	}
+	function getTables() {
+		axios.get(
+			"https://django-cisl-52818-9-1318437721.sh.run.tcloudbase.com/api/tables",
+			{
+				headers: {
+					"Content-Type": "application/json;",
+					// "X-Session-Key": "whqex9hmw03kf3j55fb80k1q1jfolg3v",
+
+					// document.cookie.split("=")[1]
+					//   ? document.cookie.split("=")[1]
+					//   : "",
+					// "X-WX-SERVICE": "django-cisl",
+				},
+			}
+		);
+	}
+	return (
+		<div className="App">
+			<header className="App-header">
+				<button onClick={login}>admin login</button>
+				<button onClick={getTables}>fetch tables</button>
+			</header>
+		</div>
+	);
 }
 
 export default App;
