@@ -18,7 +18,7 @@ function App() {
 			{
 				headers: {
 					"Content-Type": "application/json;",
-          "Cookie":"sessionid=kgyq7ng4m0l309xo3mwq5ncso14s3qop"
+          "Cookie":"sessionid=kgyq7ng4m0l309xo3mwq5ncso14s3qop;"
 					// sessionid=kgyq7ng4m0l309xo3mwq5ncso14s3qop
 					// document.cookie.split("=")[1]
 					//   ? document.cookie.split("=")[1]
